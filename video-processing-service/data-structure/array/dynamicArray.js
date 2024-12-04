@@ -31,10 +31,15 @@ class DynamicArray {
    * @returns {void}
    */
   pushback(n) {
+    // Check and see of length is equal to capacity
+    // Increase the size
     if (this.length === this.capacity) {
       this.resize()
     }
+    // Add a new element to the end of the array
+    // this.length will be the be postion
     this.myArray[this.length] = n
+    // increase the length of the array
     this.length++
   }
 
@@ -43,8 +48,10 @@ class DynamicArray {
    */
   popback() {
     if (this.length > 0) {
+      // Decrease the length
       this.length--
     }
+    // Return the last element of the array
     return this.myArray[this.length]
   }
 
