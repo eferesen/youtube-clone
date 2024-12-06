@@ -6,6 +6,7 @@ class DynamicArray {
   constructor(capacity) {
     this.capacity = capacity
     this.length = 0
+    // Set the array to capacity and then fill it with 0s
     this.myArray = new Array(this.capacity).fill(0)
   }
 
@@ -59,6 +60,7 @@ class DynamicArray {
    * @returns {void}
    */
   resize() {
+    // Start by increasing capacity and we are increasing it by 2
     this.capacity *= 2
     const newArray = new Array(this.capacity).fill(0)
     for (let i = 0; i < this.length; i++) {

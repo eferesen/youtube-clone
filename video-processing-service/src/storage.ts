@@ -7,8 +7,8 @@ import ffmpeg from 'fluent-ffmpeg';
 
 const storage = new Storage();
 
-const rawVideoBucketName = "neetcode-yt-raw-videos";
-const processedVideoBucketName = "neetcode-yt-processed-videos";
+const rawVideoBucketName = "nc-ai-yt-raw-videos";
+const processedVideoBucketName = "nc-ai-yt-processed-videos";
 
 const localRawVideoPath = "./raw-videos";
 const localProcessedVideoPath = "./processed-videos";
