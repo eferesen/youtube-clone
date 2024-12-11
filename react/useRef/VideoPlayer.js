@@ -1,6 +1,17 @@
 import React, { useRef } from "react";
 
 const VideoPlayer = () => {
+  /**
+   * Creates a reference object (videoRef) that     will be attached to the video element
+   * 
+   * useRef maintains a mutable reference that persists across re-renders
+   * 
+   * This is a good example of when to use useRef instead of state, as we're dealing with imperative DOM operations rather than reactive state management.
+   * 
+   * When you attach a ref to an HTML video element in React, useRef.current points to the actual DOM video element, which is an instance of HTMLVideoElement. This gives you access to all standard HTML5 video properties and methods.
+   * 
+   * Remember that useRef.current will be null on initial render and until the component mounts, which is why we always check if it exists before using it:
+   */
   const videoRef = useRef(null);
 
   const handlePlay = () => {
@@ -30,6 +41,7 @@ const VideoPlayer = () => {
   return (
     <div className='p-4 space-y-4'>
       <h2 className='text-xl font-bold'>Video Player with useRef</h2>
+      {/* When this line renders, videoRef.current becomes an HTMLVideoElement */}
       <video
         ref={videoRef}
         className='w-full max-w-md rounded'
