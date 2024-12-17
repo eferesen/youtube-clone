@@ -11,6 +11,7 @@ const twoSum = (nums, target) => {
 
     }
   }
+  return result
 }
 
 const twoSum2 = (nums, target) => {
