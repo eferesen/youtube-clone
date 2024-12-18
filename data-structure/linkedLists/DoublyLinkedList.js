@@ -47,4 +47,43 @@ class DoublyLinkedList {
     this.size++
   }
 
+  delete(data) {
+    // start with the first element which is head
+    // iterate over the array using while
+    // compare the data of current to the data passed in
+    // If equal
+    // We have 3 scenarios
+    // Delete data at the head
+    // Delete data at the end
+    // Delete data in between
+
+    let current = this.head
+
+    while (current) {
+      if (current.data === data) {
+        if (current === this.head) {
+          this.head = current.next
+          if (this.head) {
+            this.head.prev = null
+          } else {
+            this.tail = null
+          }
+        } else if (current === this.tail) {
+          // Delete the tail
+          this.tail = current.prev
+          this.tail.next = null
+        } else {
+          current.prev.next = current.next
+          current.next.prev = current.prev
+        }
+        this.size--
+        return true
+      }
+      current = current.next
+    }
+
+
+
+  } 
+
 }
