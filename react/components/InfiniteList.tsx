@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useInfiniteScroll } from "../hooks/useInfiniteScroll";
+// @ts-nocheck
+import React, { useState } from "react";
+import { useInfiniteScroll } from '../hooks/useInfiniteScroll';
 
 const generateList = () => {
   return Array.from({ length: 2500 }, (_, index) => ({

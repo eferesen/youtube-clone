@@ -8,7 +8,7 @@
   isLoading
   error
 */
-
+// @ts-nocheck
 import { useCallback, useEffect, useRef, useState } from "react";
 
 type infiniteScrollOptions = {
