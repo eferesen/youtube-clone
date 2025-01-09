@@ -2,6 +2,7 @@
 
 const invertBinaryTree = (root) => {
 
+  // Base condition
   if (!root) return null
 
   // swap the children
