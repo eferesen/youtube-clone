@@ -2,12 +2,12 @@
 const BinarySearch = (nums, target) => {
 
   // Set the left index
-  const leftIndex = 0
+  let leftIndex = 0
   // Set the right index
-  const rightIndex = nums.length - 1
+  let rightIndex = nums.length - 1
 
   while (leftIndex <= rightIndex) {
-    const midpointIndex = (leftIndex + right) / 2
+    const midpointIndex = Math.floor((leftIndex + rightIndex) / 2)
 
     if (nums[midpointIndex] > target) {
       rightIndex = midpointIndex - 1
