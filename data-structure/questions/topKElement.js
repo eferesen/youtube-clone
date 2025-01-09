@@ -42,7 +42,7 @@ const topKElement = (nums, k) => {
   // We have pairs [ [ '1', 4 ], [ '2', 2 ], [ '3', 3 ] ]
   freqPairs.sort((a, b) => b[1] - a[1]) // JS sort O(n + m Log(n))
 
-  const kSizeArr = freqPairs.slice(0, 2) // O(k) k is the input param
+  const kSizeArr = freqPairs.slice(0, k) // O(k) k is the input param
   console.log(kSizeArr)
 
   return kSizeArr.map(pair => parseInt(pair[0])) // O(n log n)
