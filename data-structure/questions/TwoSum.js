@@ -16,16 +16,30 @@ const twoSum = (nums, target) => {
 
 const twoSum2 = (nums, target) => {
 
-  const mapper = new Map()
+  // const mapper = new Map()
 
-  for (let ind = 0; ind < nums.length; ind++) {
-    const diff = target - nums[ind]
+  // for (let ind = 0; ind < nums.length; ind++) {
+  //   const diff = target - nums[ind]
 
-    if (mapper.has(diff)) {
-      return [mapper.get(diff), ind]
+  //   if (mapper.has(diff)) {
+  //     return [mapper.get(diff), ind]
+  //   }
+
+  //   mapper.set(nums[ind], ind)
+  // }
+
+  const tracker = new Map()
+
+  for (let num in nums) {
+    // calculate the diff
+    const diff = target - nums[num]
+
+    if (tracker.has(diff)) {
+
+      return [tracker.get(diff), num]
     }
-
-    mapper.set(nums[ind], ind)
+    // In the map set the number and index value
+    tracker.set(nums[num], num)
   }
 
 }
