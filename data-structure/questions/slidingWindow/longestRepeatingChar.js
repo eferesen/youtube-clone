@@ -3,8 +3,9 @@
  * We start the sliding window with
  *  Left
  *  Right
- * 
+ * Leet COde problem 424
  *  Length of the window is (left + right) + 1
+ * The problem asks to find the longest substring containing the same letter after performing at most k changes to the string. In other words, you can change up to k characters in the string to make all characters in the substring the same.
  */
 
 /**
@@ -23,7 +24,6 @@ const longestRepeatingCharacter = (s, k) => {
   // Iterate through the string with right pointer
   for (let right = 0; right < s.length; right++) {
 
-    const sRight = s[right]
     // Count frequency of characters in current window
     charCount[s[right]] = (charCount[s[right]] || 0) + 1;
 
@@ -45,4 +45,4 @@ const longestRepeatingCharacter = (s, k) => {
 
 }
 
-console(longestRepeatingCharacter('ABABBA', 2))
+console.log(longestRepeatingCharacter('ABABBA', 2))
